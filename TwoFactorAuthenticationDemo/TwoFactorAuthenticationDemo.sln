@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.28010.2041
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TwoFactorAuthenticationDemo", "TwoFactorAuthenticationDemo\TwoFactorAuthenticationDemo.csproj", "{E0D2F6C0-2ED3-4CC8-ABC3-3EAF5FB1BA0C}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{E0D2F6C0-2ED3-4CC8-ABC3-3EAF5FB1BA0C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E0D2F6C0-2ED3-4CC8-ABC3-3EAF5FB1BA0C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E0D2F6C0-2ED3-4CC8-ABC3-3EAF5FB1BA0C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E0D2F6C0-2ED3-4CC8-ABC3-3EAF5FB1BA0C}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {04CB2A13-2562-4B54-98F7-2AB5308C59E4}
+	EndGlobalSection
+EndGlobal
