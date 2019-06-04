@@ -3,6 +3,31 @@
 @{
     ViewBag.Title = "UserProfile";
 }
+@*dont know how nav works with this bootstrap shiz*@
+<nav class="min-h-full navbar">
+    <ul>
+        <li class="nav-item">Page1</li>
+        <li class="nav-item">Page2</li>
+        <li class="nav-item">Page3</li>
+        <li class="nav-item">Page4</li>
+    </ul>
+</nav>
+<div>
+    <h3>@ViewBag.Message</h3>
+    <div>
+        <label>Username: Admin</label>
 
-<h2>My Profile</h2>
-<h3>@ViewBag.Message</h3>
+    </div>
+    <div>
+        <label>Number: 0612345678</label>
+
+    </div>
+    <div>
+        <label>Email: Admin@groenbos.nl</label>
+
+    </div>
+    <div>
+        <button class="login100-form-btn" href="#">Reset password</button>
+    </div>
+
+</div>

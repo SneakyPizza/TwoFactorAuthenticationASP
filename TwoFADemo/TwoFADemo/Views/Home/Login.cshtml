@@ -2,41 +2,57 @@
 
 @{
     ViewBag.Title = "Login";
-}
-<h2>Login Page</h2>
-@if (ViewBag.Status == null || !ViewBag.Status)
-{
-    <div>@ViewBag.Message</div>
-    <div>
-        @using (Html.BeginForm())
-        {
-            <div class="form-group">
-                <label for="UserName">UserName : </label>
-                @Html.TextBoxFor(a => a.UserName, new { @class = "form-control" })
-            </div>
-            <div class="form-group">
-                <label for="Password">Password : </label>
-                @Html.TextBoxFor(a => a.Password, new { @class = "form-control", type = "password" })
-            </div>
-            <input type="submit" value="Login" class="btn btn-default" />
-        }
-    </div>
-}
-else
-{
-    <div>@ViewBag.Message</div>
-    <div>
-        <img src="@ViewBag.BarcodeImageUrl" />
-    </div>
-    <div>
-        Manual Setup Code : @ViewBag.SetupCode
-    </div>
-    <div>
-        @using (Html.BeginForm("TwoFactorAuthenticate", "Home", FormMethod.Post))
-        {
-            <input type="text" name="CodeDigit" />
-            <input type="submit" class="btn btn-success" />
-        }
-    </div>
-}
+}<div class="container-login100">
+    <div class="wrap-login100 p-l-50 p-r-50 p-t-77 p-b-30">
 
+        <div class="login100-form validate-form">
+            <span class="login100-form-title p-b-55">
+                Login
+            </span>
+            @if (ViewBag.Status == null || !ViewBag.Status)
+            {
+                <div>@ViewBag.Message</div>
+                <div>
+                    @using (Html.BeginForm())
+                    {
+                        <div class="wrap-input100 validate-input m-b-16" data-validate="Valid email is required: ex@abc.xyz">
+                            @Html.TextBoxFor(a => a.UserName, new { @class = "input100", type = "text", name = "email", placeholder = "Username" })
+                            <span class="focus-input100"></span>
+                            <span class="symbol-input100">
+                                <span class="lnr lnr-envelope"></span>
+                            </span>
+                        </div>
+                        <div class="wrap-input100 validate-input m-b-16" data-validate="Password is required">
+                            @Html.TextBoxFor(a => a.Password, new { @class = "input100", type = "password", name = "pass", placeholder = "Password" })
+                            <span class="focus-input100"></span>
+                            <span class="symbol-input100">
+                                <span class="lnr lnr-lock"></span>
+                            </span>
+                        </div>
+                        <div class="container-login100-form-btn p-t-25">
+                            <input type="submit" value="Login" class="login100-form-btn" />
+                        </div>
+                    }
+
+                </div>
+            }
+            else
+            {
+                <div>@ViewBag.Message</div>
+                <div>
+                    <img src="@ViewBag.BarcodeImageUrl" />
+                </div>
+                <div>
+                    Manual Setup Code : @ViewBag.SetupCode
+                </div>
+                <div>
+                    @using (Html.BeginForm("TwoFactorAuthenticate", "Home", FormMethod.Post))
+                    {
+                        <input type="text" name="CodeDigit" class="input100" placeholder="Code" />
+                        <input type="submit" class="login100-form-btn" />
+                    }
+                </div>
+            }
+            </div>
+    </div>
+</div>
